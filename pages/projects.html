@@ -268,7 +268,7 @@
 </div>
 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
 <figure class="tm-video-item">
-<img alt="Image" class="img-fluid" src="https://raw.githubusercontent.com/BlossomTheme/IDA/main/images/1.png"/>
+<img alt="Image" class="img-fluid" src="https://raw.githubusercontent.com/BlossomTheme/IDA/main/images/2.png"/>
 <figcaption class="d-flex align-items-center justify-content-center">
 <a href="./pages/ida.html">View more</a>
 </figcaption>
@@ -312,7 +312,7 @@
 </div>
 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
 <figure class="tm-video-item">
-<img alt="Image" class="img-fluid" src="https://raw.githubusercontent.com/BlossomTheme/GTK/main/screenshot01.png"/>
+<img alt="Image" class="img-fluid" src="https://raw.githubusercontent.com/BlossomTheme/GTK/main/screenshot03.png"/>
 <figcaption class="d-flex align-items-center justify-content-center">
 <a href="./pages/gtk.html">View more</a>
 </figcaption>
@@ -330,6 +330,17 @@
 </figure>
 <div class="d-flex justify-content-between tm-text-gray">
 <span>Textadept</span>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+<figure class="tm-video-item">
+<img alt="Image" class="img-fluid" src="https://raw.githubusercontent.com/BlossomTheme/Ghidra/main/images/4.png"/>
+<figcaption class="d-flex align-items-center justify-content-center">
+<a href="./pages/ghidra.html">View more</a>
+</figcaption>
+</figure>
+<div class="d-flex justify-content-between tm-text-gray">
+<span>Ghidra</span>
 </div>
 </div>
 
@@ -360,15 +371,18 @@
 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
 <h3 class="tm-text-primary mb-4">Our Links</h3>
 <ul class="tm-footer-links pl-0">
-<li><a href="https://github.com/BlossomTheme/BlossomTheme/blob/master/Contribute/CONTRIBUTING.md">Contribute</a></li>
+<li><a href="https://github.com/BlossomTheme/BlossomTheme/blob/master/Contribute/CONTRIBUTING.md">Contribute</a>
+</li>
 <li><a href="https://blossomtheme.github.io">Our Organization</a></li>
 </ul>
 </div>
 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
 <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
-<li class="mb-2"><a href="https://youtube.com/@BlossomTheme"><i class="fab fa-youtube"></i></a></li>
+<li class="mb-2"><a href="https://youtube.com/@BlossomTheme"><i class="fab fa-youtube"></i></a>
+</li>
 <li class="mb-2"><a href="https://www.linkedin.com/company/blossomtheme/"><i class="fab fa-linkedin"></i></a></li>
-<li class="mb-2"><a href="https://github.com/BlossomTheme/"><i class="fab fa-github"></i></a></li>
+<li class="mb-2"><a href="https://github.com/BlossomTheme/"><i class="fab fa-github"></i></a>
+</li>
 <li class="mb-2"><a href="https://discord.gg/qmnuDGEKRc"><i class="fab fa-discord"></i></a></li>
 </ul>
 </div>
@@ -379,11 +393,11 @@
 </div>
 <script src="../assets/js/plugins.js"></script>
 <script>
-        $(window).on("load", function() {
+        $(window).on("load", function () {
             $('body').addClass('loaded');
         });
 
-        $(function(){
+        $(function () {
             /************** Video background *********/
 
             function setVideoSize() {
@@ -395,22 +409,22 @@
                 let newVidHeight = windowWidth * vidHeight / vidWidth;
                 let marginLeft = 0;
                 let marginTop = 0;
-            
+
                 if (newVidHeight < maxVidHeight) {
                     newVidHeight = maxVidHeight;
                     newVidWidth = newVidHeight * vidWidth / vidHeight;
                 }
-            
-                if(newVidWidth > windowWidth) {
+
+                if (newVidWidth > windowWidth) {
                     marginLeft = -((newVidWidth - windowWidth) / 2);
                 }
-            
-                if(newVidHeight > maxVidHeight) {
+
+                if (newVidHeight > maxVidHeight) {
                     marginTop = -((newVidHeight - $('#tm-video-container').height()) / 2);
                 }
-            
+
                 const tmVideo = $('#tm-video');
-            
+
                 tmVideo.css('width', newVidWidth);
                 tmVideo.css('height', newVidHeight);
                 tmVideo.css('margin-left', marginLeft);
