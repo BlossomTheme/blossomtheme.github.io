@@ -117,7 +117,7 @@ def add_project_page_entry(image, name):
             <figure class="tm-video-item">
                 <img src={image} alt="Image" class="img-fluid">
                 <figcaption class="d-flex align-items-center justify-content-center">
-                    <a href="./pages/{name.lower()}.html">View more</a>
+                    <a href="./{name.lower()}.html">View more</a>
                 </figcaption>                    
             </figure>
             <div class="d-flex justify-content-between tm-text-gray">
