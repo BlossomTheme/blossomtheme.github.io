@@ -24,7 +24,7 @@ def to_update():
 
     for entry in data:
         date_created = dt.fromisoformat(entry["created_at"].split("T")[0])
-        if date_created > init_date:
+        if date_created >= init_date:
             to_be_updated.append(entry["name"])
 
     print("Fetching to be updated list")
