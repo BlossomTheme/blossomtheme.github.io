@@ -145,7 +145,7 @@ def update_config():
 
 def main():
     list_to_update = to_update()
-    # list_to_update = ["Ghidra"] ## generate single theme(manual run)
+    # list_to_update = ["Gedit"] ## generate single theme(manual run)
 
     if list_to_update:
         for addition in list_to_update:
