@@ -3926,3 +3926,70 @@ input, select, textarea {
 ::-webkit-scrollbar-thumb:hover {
 	background-color: #FF058D;
 }
+
+
+/* --- Mascot layout in welcome section --- */
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1 1 50%;
+}
+
+.intro-image {
+  flex: 1 1 45%;
+  text-align: right;
+}
+
+
+.intro-image img {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .intro-image {
+    text-align: center;
+  }
+
+  .intro-image img {
+    max-width: 200px;
+  }
+}
+
+/* --- Sidebar logo --- */
+#sidebar .logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#sidebar .logo-container img {
+  width: 300px; /* adjust as you like */
+  height: auto;
+  border-radius: 12px; /* optional: smooth corners */
+  transition: transform 0.3s ease;
+}
+
+#sidebar .logo-container img:hover {
+  transform: scale(1.05);
+}
