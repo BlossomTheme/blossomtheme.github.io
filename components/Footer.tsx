@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             </div>
             <div className=\"flex flex-col gap-6\">
                <span className=\"text-xs font-black text-[#ff058d] tracking-widest uppercase\">Resources</span>
-               <a href=\"https://blossomtheme.github.io/Docs/\" className=\"text-xl font-serif hover:text-[#ff058d] transition-colors\">Docs</a>
+               <a href=\"https://github.com/BlossomTheme/BlossomTheme\" className=\"text-xl font-serif hover:text-[#ff058d] transition-colors\">Docs</a>
                <a href=\"https://github.com/BlossomTheme/BlossomTheme/tree/master/Palette\" className=\"text-xl font-serif hover:text-[#ff058d] transition-colors\">Palette</a>
             </div>
           </div>
