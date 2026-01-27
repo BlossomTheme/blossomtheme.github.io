@@ -1,180 +1,163 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>BlossomTheme</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="./images/flower-trans.png" type="image/icon type">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<div class="logo-container">
-    </div>
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">What we do</a></li>
-							<li><a href="#two">Projects</a></li>
-							<li><a href="#three">Follow US</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Theme</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@400;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF85A2;
+            --secondary: #FFB7C5;
+            --dark: #4A148C;
+            --bg: #FFF5F7;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--dark);
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Global Paper Texture */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 999;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        .manga-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            gap: 16px;
+            height: 100vh;
+            padding: 16px;
+            box-sizing: border-box;
+        }
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-  <div class="inner intro-content">
-    <div class="intro-text">
-      <h1>Blossom Theme</h1>
-      <p>
-        An open-source initiative based in Sri Lanka for curating vibrant color themes with accessibility in mind.
-        Our palettes maintain a color contrast ratio of 5.06:1, ensuring readability without compromising aesthetics.
-        Join us in blooming the world of design with thoughtfully crafted, inclusive color schemes.
-      </p>
-      <ul class="actions">
-        <li><a href="#one" class="button scrolly">Learn more</a></li>
-      </ul>
-    </div>
-    <div class="intro-image">
-      <img src="images/avatar01.png" alt="Blossom Mascot" />
-    </div>
-  </div>
-</section>
+        @media (max-width: 768px) {
+            .manga-grid {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+                gap: 8px;
+                padding: 8px;
+            }
+        }
 
+        .manga-panel {
+            background: white;
+            border: 6px solid var(--dark);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            box-shadow: 4px 4px 0px var(--dark);
+        }
+        
+        .manga-panel:hover {
+            z-index: 50;
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px var(--primary);
+        }
 
-				<!-- One -->
-				<section id="one" class="wrapper style3 fade-up">
-					<div class="inner">
-						<h2>What we do</h2>
-						<p>Curates color themes for a variety of programming environments, text editors, and other applications. <br>The themes aim to enhance readability and aesthetics, providing users with visually appealing and functional color schemes for their software development work.</p>
-						<div class="features">
-							<section>
-								<span class="icon solid major fa-dollar-sign"></span>
-								<h3>Terminals</h3>
-								<ul>
-									<li>Git-Bash</li>
-									<li>Gnome-Terminal</li>
-									<li>Terminator</li>
-									<li>Alacritty</li>
-								</ul>
-							</section>
-							<section>
-								<span class="icon solid major fa-code"></span>
-								<h3>Text Editors</h3>
-								<ul>
-									<li>Visual Studio Code</li>
-									<li>Obsidian</li>
-									<li>Gedit</li>
-								</ul>
-							</section>
-							<section>
-								<span class="icon solid major fa-music"></span>
-								<h3>Music Players</h3>
-								<ul>
-									<li>MusicBee</li>
-								</ul>
-							</section>
-							<section>
-								<span class="icon solid major fa-angle-right"></span>
-								<h3>Other Applications</h3>
-								<ul>
-									<li>AwesomeWM</li>
-									<li>Monkeytype</li>
-									<li>Rofi</li>
-									<li>Git Kraken</li>
-								</ul>
-							</section>
-						</div>
-					</div>
-				</section>
+        .manga-border-thick {
+            border-width: 10px;
+        }
 
-				<!-- Two -->
-				<section id="two" class="wrapper style2 spotlights">
-					<section>
-						<a href="#" class="image"><img src="./images/vs-code/vscode-1.png" alt="" data-position="center center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Visual Studio Code</h2>
-								<p>Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux.</p>
-								<ul class="actions">
-									<li><a href="./pages/vscode.html" class="button">Learn more</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section>
-						<a href="#" class="image"><img src="./images/obsidian/obsidian-3.png" alt="" data-position="top center" /></a>
-						<div class="content">
-							<div class="inner">
-								<h2>Obsidian</h2>
-								<p>Obsidian is a personal knowledge base and note-taking software application that operates on Markdown files.</p>
-								<ul class="actions">
-									<li><a href="./pages/obsidian.html" class="button">Learn more</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-					<section>
-						<div class="content">
-							<div class="inner">
+        .screentone {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(var(--dark) 0.5px, transparent 0);
+            background-size: 6px 6px;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 5;
+        }
 
-								<ul class="actions">
-									<li><a href="./pages/projects.html" class="button">Browse All Projects &#8594;</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-				</section>
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
 
+        .font-manga {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 0.05em;
+        }
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Follow Us</h2>
-							<div class="split style1">
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Social</h3>
-											<a href="https://www.linkedin.com/company/blossomtheme/" target="_blank">LinkedIn</a><br>
-											<a href="https://github.com/BlossomTheme/" target="_blank">Github</a><br>
-											<a href="https://youtube.com/@BlossomTheme/" target="_blank">Youtube</a><br>
-											<a href="https://discord.gg/qmnuDGEKRc" target="_blank">Discord</a><br>
-											<!-- <a href="#">LinkedIn</a><br> -->
-										</li>
-										<!-- <li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Donate</h3>
-											<a href="#">Bitvoin</a>
-										</li> -->
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-					
+        .speech-bubble {
+            background: white;
+            border: 4px solid var(--dark);
+            padding: 1rem;
+            border-radius: 40%;
+            position: relative;
+            box-shadow: 6px 6px 0 var(--secondary);
+        }
 
-			</div>
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 30%;
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: var(--dark) transparent transparent;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        @keyframes drift {
+            0% { transform: scale(1.1) translateX(0); }
+            100% { transform: scale(1.1) translateX(15px); }
+        }
+        .drift-bg {
+            animation: drift 15s linear infinite alternate;
+            filter: contrast(1.1) saturate(1.1);
+        }
 
-	</body>
+        /* Speed lines decoration */
+        .speed-lines {
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,133,162,0.1) 10px, rgba(255,133,162,0.1) 11px);
+            pointer-events: none;
+        }
+
+        .action-tag {
+            background: var(--dark);
+            color: white;
+            padding: 4px 12px;
+            font-family: 'Bangers', cursive;
+            transform: skewX(-15deg);
+            display: inline-block;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
 </html>
