@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-[1800px] mx-auto flex justify-between items-start p-8 md:p-12">
         <div className="pointer-events-auto flex flex-col gap-1">
           <div className="text-2xl font-black tracking-tighter text-[#4A148C] flex items-center gap-3">
-            <img src="logo.png" alt="Blossom Logo" className="w-8 h-8 object-contain" />
+            <img src="/images/logo.png" alt="Blossom Logo" className="w-8 h-8 object-contain" />
             <span>BLOSSOM</span>
           </div>
           <div className="text-[10px] tracking-[0.3em] font-bold text-[#FF85A2] uppercase ml-11">Open Source Creative</div>
