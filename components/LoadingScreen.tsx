@@ -23,7 +23,7 @@ const LoadingScreen: React.FC = () => {
         {/* Rotating logo */}
         <div className="w-24 h-24 md:w-32 md:h-32 animate-spin">
           <img
-            src="./public/images/logo.png"
+            src="/images/logo.png"
             alt="Loading"
             className="w-full h-full object-contain"
           />
